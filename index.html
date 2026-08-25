@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aziz Safarov — Apps</title>
+<style>
+  :root {
+    --bg: #F5F6F6;
+    --card: #FFFFFF;
+    --border: #ECEEED;
+    --text: #1B1E1D;
+    --muted: #8A9391;
+    --accent: #5B6CE0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14201D; --card: #1B2724; --border: #2B3532;
+      --text: #F5F6F6; --muted: #A6ADAB;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 22px;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  main { width: 100%; max-width: 560px; }
+  h1 { font-size: 30px; letter-spacing: -.5px; margin: 0 0 6px; }
+  .sub { color: var(--muted); margin: 0 0 34px; }
+  .app {
+    display: block;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 18px 20px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .app h2 { font-size: 17px; margin: 0 0 4px; }
+  .app p { margin: 0; color: var(--muted); font-size: 14.5px; }
+  footer { margin-top: 40px; color: var(--muted); font-size: 13.5px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Aziz Safarov</h1>
+  <p class="sub">Small, focused mobile apps.</p>
+
+  <a class="app" href="https://github.com/azizsafaroff/QuickQR">
+    <h2>QuickQR — Scanner &amp; Generator</h2>
+    <p>Offline QR code generator and scanner for Android.</p>
+  </a>
+
+  <footer>
+    Source on <a href="https://github.com/azizsafaroff">GitHub</a>.
+  </footer>
+</main>
+</body>
+</html>

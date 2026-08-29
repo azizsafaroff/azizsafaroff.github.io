@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lora — Privacy Policy</title>
+<style>
+  :root {
+    --bg: #F5F6F6; --card: #FFFFFF; --border: #ECEEED;
+    --text: #1B1E1D; --muted: #8A9391; --accent: #5B6CE0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14201D; --card: #1B2724; --border: #2B3532;
+      --text: #F5F6F6; --muted: #A6ADAB;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 48px 22px 72px;
+    background: var(--bg); color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex; justify-content: center;
+  }
+  main { width: 100%; max-width: 640px; }
+  h1 { font-size: 30px; letter-spacing: -.5px; margin: 0 0 6px; }
+  h2 { font-size: 19px; margin: 34px 0 10px; }
+  .updated { color: var(--muted); margin: 0 0 28px; font-size: 14.5px; }
+  .lede {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 18px 20px; margin: 0 0 8px;
+  }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  a { color: var(--accent); }
+  footer { margin-top: 44px; color: var(--muted); font-size: 13.5px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Lora — Privacy Policy</h1>
+  <p class="updated">Last updated 29 August 2026</p>
+
+  <p class="lede">
+    Lora is an app for learning English by listening to real podcasts and
+    lectures while the transcript follows along. There are no accounts and no
+    sign-in, so nothing you do here is tied to your name or your email. Lora
+    does stream its audio, look words up for you, and show ads, and each of
+    those involves sending something over the network. This page explains
+    exactly what.
+  </p>
+
+  <h2>What Lora stores on your device</h2>
+  <ul>
+    <li><strong>Where you got to.</strong> The episode you were listening to
+      and how far through it you were, so "Continue listening" can offer it
+      back.</li>
+    <li><strong>Your upvotes</strong>, the translation language you picked, and
+      whether you have seen the introduction.</li>
+    <li>Clearing the app's storage, or uninstalling Lora, deletes all of this
+      permanently.</li>
+  </ul>
+
+  <h2>An anonymous device identifier</h2>
+  <p>
+    Upvotes work without an account, so Lora needs some way to count one vote
+    per device. On first launch it generates a random identifier — a UUID that
+    is not derived from your phone, your advertising ID, or anything else about
+    you — stores it on the device, and sends it with your votes so they can be
+    counted and shown back to you.
+  </p>
+  <ul>
+    <li>It is not linked to any other identifier and it identifies a single
+      installation, not a person.</li>
+    <li>Uninstalling Lora discards it. A fresh install generates a new one, and
+      the old votes can no longer be traced to you — which also means they
+      cannot be recovered or individually withdrawn.</li>
+  </ul>
+
+  <h2>Looking a word up</h2>
+  <p>
+    When you press and hold a word in a transcript, Lora asks two free public
+    services for help, and this is the one place where text from the app leaves
+    your device:
+  </p>
+  <ul>
+    <li>The word alone goes to
+      <a href="https://dictionaryapi.dev">dictionaryapi.dev</a> for an English
+      definition.</li>
+    <li>The word <em>and the sentence it appears in</em> go to
+      <a href="https://mymemory.translated.net/doc/spec.php">MyMemory</a> to be
+      translated into the language you chose. MyMemory is a shared translation
+      memory, and text sent to it may be retained by that service.</li>
+  </ul>
+  <p>
+    The text sent is the published transcript of the episode you are listening
+    to — never anything you typed, and never anything about you. Neither request
+    carries your device identifier. If you never long-press a word, neither
+    request is ever made.
+  </p>
+
+  <h2>Streaming and the catalogue</h2>
+  <ul>
+    <li>The list of collections, episodes and transcripts is fetched from
+      <strong>Supabase</strong>, which hosts Lora's database.</li>
+    <li><strong>Episode audio and cover art</strong> are streamed from
+      Cloudflare R2 and, for some collections, directly from the publisher's own
+      servers — Oxford University Podcasts, VOA Learning English and the BBC
+      among them.</li>
+    <li>As with loading any web page, these servers see your IP address and the
+      technical details your device sends with the request. We do not combine
+      that with anything else, and for the publishers' own servers what happens
+      is governed by their privacy policies, not ours.</li>
+  </ul>
+
+  <h2>Advertising</h2>
+  <p>
+    Lora shows ads through Google AdMob, which is what keeps it free. To serve
+    and measure ads, Google may collect your device's advertising ID along with
+    technical information such as device type, operating system version, and
+    approximate location derived from your IP address. This is handled by
+    Google, not by us — we never receive it, and it is not connected to your
+    votes, your listening history, or the words you look up.
+  </p>
+  <ul>
+    <li>In the European Economic Area, the United Kingdom and Switzerland, Lora
+      asks for your consent before ads are personalised, using Google's own
+      consent form, shown the first time the app has ads to display.</li>
+    <li>You can reset or delete your advertising ID at any time in your device's
+      settings, under Google &rarr; Ads. The same screen lets you opt out of ad
+      personalisation across every app on the device.</li>
+    <li>See <a href="https://policies.google.com/technologies/partner-sites">How
+      Google uses information from sites or apps that use our services</a>.</li>
+  </ul>
+
+  <h2>Other network activity</h2>
+  <ul>
+    <li><strong>Update checks.</strong> On launch, Lora asks Google Play whether
+      a newer version exists.</li>
+    <li><strong>Fonts.</strong> The app's typeface is fetched from Google Fonts
+      the first time it is needed, then cached on your device.</li>
+    <li>Apart from these, the ads above, and the requests described earlier,
+      Lora makes no network requests.</li>
+  </ul>
+
+  <h2>What we do not do</h2>
+  <ul>
+    <li>No accounts, no sign-in, no profile.</li>
+    <li>No analytics or crash-reporting SDK of any kind.</li>
+    <li>No microphone, camera, contacts, or precise location access.</li>
+    <li>We do not sell your data — for the most part we do not receive it in the
+      first place.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>
+    Lora is not directed at children under 13 and we do not knowingly collect
+    information from them. Some of the material in the catalogue comes from
+    educational broadcasters and is written in plain, beginner-level English,
+    but the app is made for adults and older learners studying English, and it
+    is not designed, marketed, or intended for children.
+  </p>
+
+  <h2>Changes</h2>
+  <p>
+    If this policy changes, the revised version will be posted here with a new
+    date at the top.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Questions about this policy:
+    <a href="mailto:azizsafaroff24@gmail.com">azizsafaroff24@gmail.com</a>
+  </p>
+
+  <footer><a href="/">&larr; Back</a></footer>
+</main>
+</body>
+</html>
